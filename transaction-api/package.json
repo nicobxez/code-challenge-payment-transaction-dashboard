@@ -4,7 +4,7 @@
 	"description": "A simple REST API built with Node.js and Express",
 	"main": "src/app.js",
 	"scripts": {
-		"start": "ts-node src/app.ts",
+		"start": "PORT=3001 ts-node src/app.ts",
 		"dev": "nodemon src/app.ts"
 	},
 	"dependencies": {

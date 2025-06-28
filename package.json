@@ -1,0 +1,7 @@
+{
+	"name": "code-challenge-payment-transaction-dashboard",
+	"version": "1.0.0",
+	"scripts": {
+		"start-all": "zsh ./start-all.sh"
+	}
+}

@@ -29,7 +29,27 @@ git clone https://github.com/nicobxez/code-challenge-payment-transaction-dashboa
 cd code-challenge-payment-transaction-dashboard
 ```
 
-### 2. Start the backend
+### 2. Quick Start (Recommended)
+
+Make sure you have execution permissions:
+
+```bash
+chmod +x start-all.sh
+```
+
+Then, simply run:
+
+```bash
+npm run start-all
+```
+
+This command will install dependencies and launch both the backend and frontend
+automatically.
+
+If you prefer, you can also start each service independently by following the
+steps below.
+
+### a. Start the backend
 
 1. Go to the transaction-api folder:
    ```bash
@@ -46,7 +66,7 @@ cd code-challenge-payment-transaction-dashboard
    The backend should be running at `http://localhost:3001` (or the configured
    port).
 
-### 3. Start the frontend
+### b. Start the frontend
 
 1. Open a new terminal and go to the transaction-ui folder:
    ```bash

@@ -16,7 +16,7 @@ environments and provide a simple local development setup.
 
 ```bash
 git clone https://github.com/nicobxez/code-challenge-payment-transaction-dashboard.git
-cd taller-paypal-challenge
+cd code-challenge-payment-transaction-dashboard
 ```
 
 ### 2. Start the backend

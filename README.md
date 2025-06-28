@@ -6,8 +6,12 @@ environments and provide a simple local development setup.
 
 ## Tools
 
-- **Frontend:** [React](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) + [Font Awesome](https://fontawesome.com/)
-- **Backend:** [Node.js](https://nodejs.org/) + [Express](https://expressjs.com/)
+- **Frontend:** [React](https://react.dev/) +
+  [TypeScript](https://www.typescriptlang.org/) +
+  [Tailwind CSS](https://tailwindcss.com/) +
+  [Font Awesome](https://fontawesome.com/)
+- **Backend:** [Node.js](https://nodejs.org/) +
+  [Express](https://expressjs.com/)
 
 ## Preview
 

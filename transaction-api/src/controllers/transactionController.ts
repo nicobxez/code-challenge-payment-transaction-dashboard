@@ -32,9 +32,14 @@ export function getTransactionList(
 
 		if (fromDate || toDate) {
 			result = result.filter((t) => {
+				if (t.date === null || t.date === undefined) return false;
+
 				const txDate = new Date(String(t.date));
+
+				if (isNaN(txDate.getTime())) return false;
 				if (fromDate && txDate < fromDate) return false;
 				if (toDate && txDate > toDate) return false;
+
 				return true;
 			});
 		}

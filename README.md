@@ -11,6 +11,7 @@ environments and provide a simple local development setup.
   [Tailwind CSS](https://tailwindcss.com/) +
   [Font Awesome](https://fontawesome.com/)
 - **Backend:** [Node.js](https://nodejs.org/) +
+  [TypeScript](https://www.typescriptlang.org/) +
   [Express](https://expressjs.com/)
 
 ## Preview

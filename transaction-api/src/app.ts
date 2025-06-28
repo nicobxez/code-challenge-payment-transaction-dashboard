@@ -1,9 +1,8 @@
-require('dotenv').config();
-
-const express = require('express');
-const cors = require('cors');
-const setRoutes = require('./routes/index');
-const errorHandler = require('./middleware/errorHandler');
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import { setRoutes } from './routes/index';
+import errorHandler from './middleware/errorHandler';
 
 const app = express();
 const PORT = process.env.PORT || 3001;

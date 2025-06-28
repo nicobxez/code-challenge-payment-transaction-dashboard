@@ -1,4 +1,4 @@
-const transactions = [
+export const transactions = [
 	{
 		id: 1,
 		date: '2025-06-27T00:00:00.000Z',
@@ -140,5 +140,3 @@ const transactions = [
 		currency: 'USD',
 	},
 ];
-
-module.exports = transactions;

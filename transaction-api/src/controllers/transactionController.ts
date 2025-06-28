@@ -1,11 +1,19 @@
-const transactions = require('../mocks/transactionList');
+import { Request, Response, NextFunction } from 'express';
+import { transactions } from '../mocks/transactionList';
 
-const getTransactionList = (req, res, next) => {
+export function getTransactionList(
+	req: Request,
+	res: Response,
+	next: NextFunction
+) {
 	try {
 		let result = [...transactions];
 
 		// Search
-		const search = req.query.search?.toLowerCase();
+		const search = req.query.search
+			? String(req.query.search).toLowerCase()
+			: undefined;
+
 		if (search) {
 			result = result.filter((t) =>
 				Object.values(t).some((val) =>
@@ -15,11 +23,16 @@ const getTransactionList = (req, res, next) => {
 		}
 
 		// Date range filter
-		const fromDate = req.query.fromDate ? new Date(req.query.fromDate) : null;
-		const toDate = req.query.toDate ? new Date(req.query.toDate) : null;
+		const fromDate = req.query.fromDate
+			? new Date(String(req.query.fromDate))
+			: undefined;
+		const toDate = req.query.toDate
+			? new Date(String(req.query.toDate))
+			: undefined;
+
 		if (fromDate || toDate) {
 			result = result.filter((t) => {
-				const txDate = new Date(t.date);
+				const txDate = new Date(String(t.date));
 				if (fromDate && txDate < fromDate) return false;
 				if (toDate && txDate > toDate) return false;
 				return true;
@@ -27,12 +40,13 @@ const getTransactionList = (req, res, next) => {
 		}
 
 		// Sort
-		const sortBy = req.query.sortBy;
+		const sortBy = req.query.sortBy ? String(req.query.sortBy) : undefined;
 		const order = req.query.order === 'desc' ? 'desc' : 'asc';
+
 		if (sortBy) {
 			result.sort((a, b) => {
-				const aVal = a[sortBy];
-				const bVal = b[sortBy];
+				const aVal = a[sortBy as keyof typeof a];
+				const bVal = b[sortBy as keyof typeof b];
 
 				const aIsNullOrZero = aVal === null || aVal === undefined || aVal === 0;
 				const bIsNullOrZero = bVal === null || bVal === undefined || bVal === 0;
@@ -47,8 +61,8 @@ const getTransactionList = (req, res, next) => {
 		}
 
 		// Pagination
-		const page = parseInt(req.query.page) || 1;
-		const limit = parseInt(req.query.limit) || 10;
+		const page = req.query.page ? parseInt(String(req.query.page)) : 1;
+		const limit = req.query.limit ? parseInt(String(req.query.limit)) : 10;
 		const start = (page - 1) * limit;
 		const end = start + limit;
 		const paginated = result.slice(start, end);
@@ -69,8 +83,4 @@ const getTransactionList = (req, res, next) => {
 	} catch (error) {
 		next(error);
 	}
-};
-
-module.exports = {
-	getTransactionList,
-};
+}

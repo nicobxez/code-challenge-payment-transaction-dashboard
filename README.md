@@ -19,6 +19,12 @@ git clone https://github.com/nicobxez/code-challenge-payment-transaction-dashboa
 cd code-challenge-payment-transaction-dashboard
 ```
 
+## Tools
+
+- **Frontend:** [React](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) + [Font Awesome](https://fontawesome.com/)
+- **Backend:** [Node.js](https://nodejs.org/) + [Express](https://expressjs.com/)
+
+
 ### 2. Start the backend
 
 1. Go to the transaction-api folder:

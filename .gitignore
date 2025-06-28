@@ -1,1 +1,7 @@
 .DS_Store
+
+transaction-api/node_modules/
+transaction-api/package-lock.json
+
+transaction-ui/node_modules/
+transaction-ui/package-lock.json

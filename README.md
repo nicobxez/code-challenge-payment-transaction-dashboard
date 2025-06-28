@@ -4,6 +4,11 @@ This project is a fullstack application that includes a Node.js backend and a
 React frontend. Its goal is to demonstrate seamless integration between both
 environments and provide a simple local development setup.
 
+## Tools
+
+- **Frontend:** [React](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) + [Font Awesome](https://fontawesome.com/)
+- **Backend:** [Node.js](https://nodejs.org/) + [Express](https://expressjs.com/)
+
 ## Preview
 
 ![App Preview](assets/ui-preview.png)
@@ -18,12 +23,6 @@ environments and provide a simple local development setup.
 git clone https://github.com/nicobxez/code-challenge-payment-transaction-dashboard.git
 cd code-challenge-payment-transaction-dashboard
 ```
-
-## Tools
-
-- **Frontend:** [React](https://react.dev/) + [Tailwind CSS](https://tailwindcss.com/) + [Font Awesome](https://fontawesome.com/)
-- **Backend:** [Node.js](https://nodejs.org/) + [Express](https://expressjs.com/)
-
 
 ### 2. Start the backend
 

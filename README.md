@@ -17,6 +17,7 @@ environments and provide a simple local development setup.
 ## Preview
 
 ![App Preview](assets/ui-preview.png)
+![API Preview](assets/api-preview.png)
 
 ---
 

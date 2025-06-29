@@ -4,7 +4,7 @@ export type TransactionColumnsProps = {
 };
 
 export type TransactionDataProps = {
-	id: number;
+	uuid: string;
 	date: string;
 	description: string;
 	amount: number;

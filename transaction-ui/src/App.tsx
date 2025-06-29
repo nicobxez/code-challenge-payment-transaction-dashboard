@@ -18,7 +18,7 @@ function App() {
 	const [limit, setLimit] = useState<number>(TABLE_PAGE_LIMITS[0]);
 	const [search, setSearch] = useState<string>('');
 	const [column, setColumn] = useState<TRANSACTION_TABLE_COLUMN_KEYS>(
-		TRANSACTION_TABLE_COLUMN_KEYS.ID
+		TRANSACTION_TABLE_COLUMN_KEYS.UUID
 	);
 	const [order, setOrder] = useState<TABLE_ORDER>(TABLE_ORDER.ASC);
 	const [dateRange, setDateRange] = useState<{

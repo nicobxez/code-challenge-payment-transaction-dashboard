@@ -40,12 +40,12 @@ const TableToolbar = ({
 		(search && search.trim() !== '') ||
 		(dateRange?.from && dateRange.from !== '') ||
 		(dateRange?.to && dateRange.to !== '') ||
-		column !== TRANSACTION_TABLE_COLUMN_KEYS.ID ||
+		column !== TRANSACTION_TABLE_COLUMN_KEYS.UUID ||
 		order !== TABLE_ORDER.ASC;
 
 	const handleResetFilters = () => {
 		onSearchChange?.('');
-		onColumnChange?.(TRANSACTION_TABLE_COLUMN_KEYS.ID);
+		onColumnChange?.(TRANSACTION_TABLE_COLUMN_KEYS.UUID);
 		onOrderChange?.(TABLE_ORDER.ASC);
 		onDateRangeChange?.({ from: '', to: '' });
 	};

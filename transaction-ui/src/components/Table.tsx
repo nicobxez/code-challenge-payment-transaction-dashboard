@@ -121,7 +121,7 @@ const Table = ({
 
 							return (
 								<tr
-									key={tx?.id}
+									key={tx?.uuid}
 									className={
 										idx % 2 === 0
 											? 'bg-white hover:bg-blue-50 transition'

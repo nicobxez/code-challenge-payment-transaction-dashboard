@@ -12,7 +12,7 @@ environments and provide a simple local development setup.
   [Font Awesome](https://fontawesome.com/)
 - **Backend:** [Node.js](https://nodejs.org/) +
   [TypeScript](https://www.typescriptlang.org/) +
-  [Express](https://expressjs.com/)
+  [NestJS](https://nestjs.com/) + [Swagger](https://swagger.io/)
 
 ## Preview
 
@@ -63,8 +63,9 @@ steps below.
    ```bash
    npm run start
    ```
-   The backend should be running at `http://localhost:3001` (or the configured
-   port).
+   The backend should be running at `http://localhost:3001/api` (or the
+   configured port). You can access the **API documentation (Swagger UI)** at
+   this URL.
 
 ### b. Start the frontend
 
